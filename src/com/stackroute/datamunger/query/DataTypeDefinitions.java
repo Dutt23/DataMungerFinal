@@ -1,9 +1,5 @@
 package com.stackroute.datamunger.query;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /*
  * implementation of DataTypeDefinitions class. This class contains a method getDataTypes() 

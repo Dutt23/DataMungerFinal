@@ -2,10 +2,6 @@ package com.stackroute.datamunger.query;
 
 import java.util.HashMap;
 
-import com.stackroute.datamunger.query.parser.QueryParameter;
-import com.stackroute.datamunger.query.parser.QueryParser;
-import com.stackroute.datamunger.reader.CsvQueryProcessor;
-import com.stackroute.datamunger.reader.QueryProcessingEngine;
 
 public class Query {
 

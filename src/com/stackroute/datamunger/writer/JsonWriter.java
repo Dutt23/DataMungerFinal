@@ -1,8 +1,5 @@
 package com.stackroute.datamunger.writer;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Map;
 
 import com.google.gson.Gson;

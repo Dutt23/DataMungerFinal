@@ -1,7 +1,5 @@
 package com.stackroute.datamunger.query.parser;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class QueryParser {
 

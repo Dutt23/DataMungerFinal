@@ -1,20 +1,8 @@
 package com.stackroute.datamunger.reader;
 
-import java.io.BufferedReader;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.List;
-
 import com.stackroute.datamunger.query.DataSet;
-import com.stackroute.datamunger.query.DataTypeDefinitions;
-import com.stackroute.datamunger.query.Filter;
-import com.stackroute.datamunger.query.Header;
-import com.stackroute.datamunger.query.Row;
-import com.stackroute.datamunger.query.RowDataTypeDefinitions;
 import com.stackroute.datamunger.query.parser.QueryParameter;
-import com.stackroute.datamunger.query.parser.Restriction;
+
 
 
 
