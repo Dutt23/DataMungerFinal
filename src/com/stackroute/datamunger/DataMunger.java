@@ -38,7 +38,7 @@ public class DataMunger {
 			if (writer.writeToJson(query.executeQuery(queryString))) {
 				System.out.println("Output written to data/result.json");
 			}
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 			System.out.println("File not found");
 		}
 		
