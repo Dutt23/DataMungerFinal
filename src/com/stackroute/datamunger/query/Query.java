@@ -2,9 +2,15 @@ package com.stackroute.datamunger.query;
 
 import java.util.HashMap;
 
+import com.stackroute.datamunger.query.parser.QueryParameter;
+import com.stackroute.datamunger.query.parser.QueryParser;
+import com.stackroute.datamunger.reader.CsvQueryProcessor;
+import com.stackroute.datamunger.reader.QueryProcessingEngine;
+
 
 public class Query {
-
+	QueryParser queryParser = null;
+	QueryParameter queryParameter = null;
 	/*
 	 * This method will: 
 	 * 1.parse the query and populate the QueryParameter object
@@ -16,31 +22,31 @@ public class Query {
 	 */
 	public HashMap executeQuery(String queryString) {
 	
-		/* instantiate QueryParser class */
-		
-		/*
-		 * call parseQuery() method of the class by passing the queryString which will
-		 * return object of QueryParameter
-		 */
-		
-		
-		/*
-		 * Check for Type of Query based on the QueryParameter object. In this
-		 * assignment, we will process only queries containing zero, one or multiple
-		 * where conditions i.e. conditions without aggregate functions, order by clause
-		 * or group by clause
-		 */
-		
-		
-		/*
-		 * call the getResultSet() method of CsvQueryProcessor class by passing the
-		 * QueryParameter Object to it. This method is supposed to return resultSet
-		 * which is a HashMap
-		 */
-		
-		
-	
-		return null;
-	}
+		  /* instantiate QueryParser class */
+        queryParser = new QueryParser();
+        /*
+         * call parseQuery() method of the class by passing the queryString which will
+         * return object of QueryParameter
+         */
+        queryParameter = queryParser.parseQuery(queryString);
+        QueryProcessingEngine queryEngine = null;
+        queryEngine = new CsvQueryProcessor();
 
+        /*
+         * Check for Type of Query based on the QueryParameter object. In this
+         * assignment, we will process only queries containing zero, one or multiple
+         * where conditions i.e. conditions without aggregate functions, order by clause
+         * or group by clause
+         */
+       
+        /*
+         * call the getResultSet() method of CsvQueryProcessor class by passing the
+         * QueryParameter Object to it. This method is supposed to return resultSet
+         * which is a HashMap
+         */
+        
+        return queryEngine.getResultSet(queryParameter);
+        
+        
+    }
 }
