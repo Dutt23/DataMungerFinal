@@ -27,7 +27,7 @@ public class DataTypeDefinitions {
             getIntegerValue(input);
         }    
       // checking for floating point numbers
-        else if(input.matches("\\[0-9]\\.")) {
+        else if(input.matches("[0-9].")) {
             getDoubleValue(input);
         }
       // checking for date format yyyy-mm-dd
